@@ -1,0 +1,125 @@
+html,
+body {
+    margin: 0;
+}
+
+main {
+    background: white;
+    margin-top: 50px;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    z-index: 2000;
+    background-color: rgba(21, 21, 23, .95);
+}
+
+.nav-container {
+    min-width: 800px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 130px;
+    padding-right: 130px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 50px;
+}
+
+.logo-container {
+    font-size: xx-large;
+    color: white;
+    margin-right: 100px;
+}
+
+#logo {
+    text-decoration: none;
+    color: white;
+}
+
+.search-form {
+    background-color: hsla(0, 0%, 100%, .8);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: background-color .25s ease-in-out, left .25s ease-in-out, width .25s ease-in-out, opacity .25s ease-in-out;
+    transition: background-color .25s ease-in-out, left .25s ease-in-out, width .25s ease-in-out, opacity .25s ease-in-out;
+    width: 220px;
+    height: 33px;
+    margin: 0;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+.search-icon-button {
+    position: inherit;
+    background: url(https://s.yimg.com/uy/build/images/sprites/icons-53c11694.png) -109px -403px no-repeat;
+    width: 18px;
+    height: 18px;
+    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+    opacity: .6;
+    margin: 8px 0 7px 11px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transition: left .25s ease-in-out;
+    transition: left .25s ease-in-out;
+    border: 0;
+    top: 0;
+    left: 0;
+    padding: 0;
+    text-align: left;
+    text-indent: 999em;
+    cursor: pointer;
+    outline: none;
+}
+
+.search-pillbox {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-box-flex: 0;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    -webkit-transition: left .25s ease-in-out;
+    transition: left .25s ease-in-out;
+    margin: 0 0 0 5px;
+    padding: 0;
+    height: 33px;
+    line-height: 33px;
+    padding: 3px 0;
+    left: 32px;
+}
+
+#search-field {
+    background-color: transparent;
+    left: 0;
+    height: 33px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    outline: 0;
+    border: 0;
+    box-sizing: border-box;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}

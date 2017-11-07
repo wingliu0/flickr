@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="flickrApp">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.6/angular.min.js"></script>
+    <script src="/js/app.js"></script>
+    <link href="/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div>
+        <div class="nav" ng-controller="navController as navCtrl">
+            <div class="nav-container">
+                <div class="logo-container"> <a href="/" id="logo">flickr</a> </div>
+                <div class="search-form">
+                    <form method="get" action="/search/" class="search-form">
+                        <label aria-label="Search"> <input type="submit" class="search-icon-button" tabindex="-1" aria-label="Search" role="button"> </label>
+                        <ul class="search-pillbox"> </ul>
+                        <input ng-model="navCtrl.text" type="text" id="search-field" class="autosuggest-selectable-item" placeholder="Photos, people, or groups"
+                            name="text" autocomplete="off" aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <main ng-controller="feedController as feedCtrl">
+            <a ng-repeat="item in feedCtrl.items">
+                <img ng-src="{{item.media.m}}" alt="{{item.title}}">
+            </a>
+        </main>
+    </div>
+
+
+    <script>
+        /**
+         * @param {String} name - key to be searched in query string
+         * @return {String} value found by key provided
+         */
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+    </script>
+</body>
+
+</html>
