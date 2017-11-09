@@ -17,3 +17,7 @@ flickr code challenge
 2. Nginx is used as the reverse proxy, routing the requests from port `80`, `443` to `3000`
 3. Git is used as the version control system
 4. On deployment, after pushed on the local side, manually pull on the server side and run `npm run deploy` to deploy the project
+
+
+# to run locally
+Run `npm start`
